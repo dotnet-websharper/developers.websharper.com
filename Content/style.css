@@ -1,0 +1,472 @@
+/*------------*/
+/*  Markdown  */
+/*------------*/
+
+    .md-rendered h1:not(.not-md-rendered) {
+        font-size: 24px;
+    }
+
+    .md-rendered h2:not(.not-md-rendered) {
+        font-size: 22px;
+    }
+
+    .md-rendered h3:not(.not-md-rendered) {
+        font-size: 20px;
+    }
+
+    .md-rendered h4:not(.not-md-rendered) {
+        font-size: 18px;
+    }
+
+    .md-rendered p {
+        margin: 0.5em 0 0.5em 0;
+    }
+
+    .md-rendered2 ul li {
+        margin-bottom: 0.5em;
+    }
+
+    .md-rendered2 ol li p,
+    .md-rendered2 ul li p {
+        margin: 0;
+    }
+
+    .md-rendered .pre-container {
+        background: #F8F8FF;
+        background: #D6E8F6;
+        display: inline-block;
+        width: 100%;
+        color: #333;
+        font-size:14px;
+        overflow-x: auto;
+    padding: 10px 10px;
+    border-radius: 5px;
+    }
+
+        /* both line numbers and code block body */
+        .md-rendered .pre-container pre {
+            display: inline-block;
+            margin: 0;
+            background: none;
+            border: none;
+            line-height:1.25em;
+            padding: 4px;
+            padding-left: 8px;
+            border-radius: 0;
+            font-size: 14px;
+        }
+
+        /* line numbers */
+        .md-rendered .pre-container pre:first-child {
+            text-align: right;
+            background: rgba(0,0,50,0.1);
+        background: #B0C4DE;
+            color: white;
+        }
+
+        /* code block body */
+        .md-rendered .pre-container pre:nth-child(2) {
+            word-wrap: initial;
+            word-break: initial;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        .md-rendered .pre-container a.command {
+            margin: 0 0 0 10px;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+    .md-rendered table {
+        border-collapse: collapse;
+    }
+
+    .md-rendered td {
+        /*border: solid 1px #aaa;*/
+        padding: 0 5px;
+    }
+
+    .md-rendered code {
+        font-family: Consolas, "Lucida Console", Monospace;
+    }
+
+    .md-rendered a.command {
+        text-decoration: none;
+        background: #eee;
+        border: outset 1px rgb(230, 240, 250);
+        padding: 0 2px;
+        border-radius: 3px;
+        color: #228;
+    }
+
+    .md-rendered a.command:hover {
+        background: rgb(210, 230, 245);
+    }
+
+    .md-rendered a.command:active {
+        border: inset 1px #ccc;
+    }
+
+    /* Non-md content embedded in md */
+
+    .md-rendered .not-md td {
+        border: none;
+    }
+
+/* ------------------------- */
+.CodeMirror {
+    height:auto;
+    margin: 1em 0em 1em 0em;
+}
+.CodeMirror pre {
+    font-family: Monaco, Menlo, Consolas, 'Courier New', monospace;
+    font-size: 13px;
+}
+.cm-meta
+{
+    color: #de6a39 !important;
+}
+
+.cm-def
+{
+    color: #008080 !important;
+}
+
+.cm-variable, .cm-property
+{
+    color: #008080 !important;
+}
+
+.cm-operator
+{
+    color: #c99 !important;
+}
+
+.cm-keyword
+{
+    color: #333 !important;
+    font-weight: bold;
+}
+
+.cm-string
+{
+    color: #d14 !important;
+}
+
+.cm-string-2
+{
+    color: red !important;
+}
+
+.cm-comment
+{
+    color: #998 !important;
+}
+
+.cm-number
+{
+    color: #fa0 !important;
+}
+
+.cm-tag
+{
+    color: #95bb20 !important;
+}
+
+.cm-attribute
+{
+    color: #39a6f3 !important;
+}
+
+div.CodeMirror-selected
+{
+    background: #ddd !important;
+}
+
+.code-error
+{
+    background-color: #dc322f;
+    color: white !important;
+}
+
+.code-warning
+{
+    background-color: #cb4b16;
+    color: white !important;
+}
+
+/******** CodeMirror hover commentary *********/
+.cm-commentary {
+    color: #f9f2f4;
+    background-color: #c7254e;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.popover {
+    font-family: 'Noto Sans',sans-serif;
+    font-size: 15px;
+    line-height: 20px;
+    word-break: normal;
+}
+
+.popover-title {
+    margin: 0 !important;
+}
+
+/*------------*/
+/*  Markdown  */
+/*------------*/
+
+    /* Hide the second BR in double BR pairs */
+    .md-rendered br + br {
+        display: none;
+    }
+
+    .md-rendered h1:not(.not-md-rendered) {
+        font-size: 24px;
+        padding: 0.75em 0 0.5em 0;
+        margin-top: 0;
+    }
+        .md-rendered h1:not(.not-md-rendered):first-child {
+            margin-top: 0;
+        }
+
+    .md-rendered h2:not(.not-md-rendered) {
+        font-size: 22px;
+        padding: 0.5em 0 0.25em 0;
+    }
+        .md-rendered h2:not(.not-md-rendered):first-child {
+            margin-top: 0;
+        }
+
+    .md-rendered h3:not(.not-md-rendered):not(.popover-title) {
+        font-size: 20px;
+        padding: 0.5em 0 0.25em 0;
+    }
+
+    .md-rendered h4:not(.not-md-rendered) {
+        font-size: 18px;
+        padding: 0.5em 0 0.25em 0;
+    }
+
+    .md-rendered h4:not(.not-md-rendered) {
+        font-size: 16px;
+        padding: 0.5em 0 0.25em 0;
+    }
+
+    .md-rendered h5:not(.not-md-rendered) {
+        font-size: 16px;
+        padding: 0.5em 0 0.25em 0;
+    }
+
+    .md-rendered p {
+        margin: 0 0 0.5em 0;
+        line-height: 20px;
+    }
+
+    .md-rendered img {
+        margin: 0 0.5em 0.5em 0.5em;
+    }
+
+    .md-rendered blockquote {
+        font-weight: normal;
+        font-style: normal;
+        font-size: inherit;
+        line-height: inherit;
+    }
+
+    .md-rendered2 ul li {
+        margin-bottom: 0.5em;
+    }
+
+    .md-rendered2 ol li p,
+    .md-rendered2 ul li p {
+        margin: 0;
+    }
+
+    .md-rendered .pre-container {
+        background: white;
+        display: inline-block;
+        width: 100%;
+        color: #333;
+        font-size:14px;
+        overflow-x: auto;
+	padding: 10px 10px;
+	border-radius: 5px;
+    }
+
+        /* both line numbers and code block body */
+        .md-rendered .pre-container pre {
+            margin: 0;
+            background: none;
+            border: none;
+            line-height:1.25em;
+            padding: 4px;
+            padding-left: 8px;
+            border-radius: 0;
+            font-size: 14px;
+        }
+
+        /* line numbers */
+        .md-rendered .pre-container pre:first-child {
+            text-align: right;
+            background: white;
+            color: #aaa;
+        }
+
+        /* code block body */
+        .md-rendered .pre-container pre:nth-child(2) {
+            word-wrap: normal;
+            word-break: initial;
+            white-space: pre;
+            overflow-x: auto;
+        }
+	
+        .md-rendered .pre-container a.command {
+            margin: 0 0 0 10px;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+    .md-rendered table {
+        border-collapse: collapse;
+    }
+
+    .md-rendered td {
+        /*border: solid 1px #aaa;*/
+        padding: 0 5px;
+    }
+
+    .md-rendered code {
+        font-family: Consolas, "Lucida Console", Monospace;
+    }
+
+    .md-rendered a.command {
+        text-decoration: none;
+        background: #eee;
+        border: outset 1px rgb(230, 240, 250);
+        padding: 0 2px;
+        border-radius: 3px;
+        color: #228;
+    }
+
+    .md-rendered a.command:hover {
+        background: rgb(210, 230, 245);
+    }
+
+    .md-rendered a.command:active {
+        border: inset 1px #ccc;
+    }
+
+    /* Non-md content embedded in md */
+
+    .md-rendered .not-md td {
+        border: none;
+    }
+
+    .md-rendered ul, .md-rendered ul {
+        margin-bottom: 1em;
+    }
+
+/* ------------------------- */
+.CodeMirror {
+    height:auto;
+    margin: 1em 0em 1em 0em;
+}
+.CodeMirror pre {
+    font-family: Monaco, Menlo, Consolas, 'Courier New', monospace;
+    font-size: 13px;
+}
+.cm-meta
+{
+    color: #de6a39 !important;
+}
+
+.cm-def
+{
+    color: #008080 !important;
+}
+
+.cm-variable, .cm-property
+{
+    color: #008080 !important;
+}
+
+.cm-operator
+{
+    color: #c99 !important;
+}
+
+.cm-keyword
+{
+    color: #333 !important;
+    font-weight: bold;
+}
+
+.cm-string
+{
+    color: #d14 !important;
+}
+
+.cm-string-2
+{
+    color: red !important;
+}
+
+.cm-comment
+{
+    color: #998 !important;
+}
+
+.cm-number
+{
+    color: #fa0 !important;
+}
+
+.cm-tag
+{
+    color: #95bb20 !important;
+}
+
+.cm-attribute
+{
+    color: #39a6f3 !important;
+}
+
+div.CodeMirror-selected
+{
+    background: #ddd !important;
+}
+
+.code-error
+{
+    background-color: #dc322f;
+    color: white !important;
+}
+
+.code-warning
+{
+    background-color: #cb4b16;
+    color: white !important;
+}
+
+/******** CodeMirror hover commentary *********/
+.cm-commentary {
+    color: #f9f2f4;
+    background-color: #c7254e;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.popover {
+    font-family: 'Noto Sans',sans-serif;
+    font-size: 15px;
+    line-height: 20px;
+    word-break: normal;
+}
+
+.popover-title {
+    margin: 0 !important;
+}

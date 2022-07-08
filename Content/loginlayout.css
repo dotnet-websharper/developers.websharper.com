@@ -1,0 +1,204 @@
+.loginlayout-backdrop {
+    position:           fixed;
+    top:                0;
+    bottom:             100%;
+    left:               0;
+    right:              0;
+    z-index:            1000;
+    background:         purple;
+    background:         linear-gradient(purple, #00438b);
+    transition:         bottom, 0.5s;
+    /*will-change:        auto;*/
+    opacity:            0.95;
+    color:              white;
+    visibility:         hidden;
+    overflow:           hidden;
+    transform:          rotateZ(360deg);
+    /*backface-visibility: hidden;*/
+    /*perspective: 1000;*/
+}
+
+/*.mdl-button {
+    transition: unset;
+    will-change: unset;
+}
+
+.mdl-snackbar {
+    will-change: unset;
+    transition: unset;
+}*/
+
+* {
+    box-shadow: unset !important;
+    text-shadow: unset !important;
+}
+
+.loginlayout-backdrop * {
+    font-family:        'Lato', sans-serif;
+}
+
+.loginlayout-backdrop.shown {
+    bottom:     0;
+    visibility: visible;
+}
+
+.layout-holder {
+    display:        flex;
+    flex-direction: column;
+    position:       relative;
+    min-height:     100%;
+    max-height:     100%;
+    height:         100%
+}
+
+.layout-toolbar {
+    display:            flex;
+    justify-content:    flex-end;
+}
+
+.layout-content {
+    flex:               1;
+    display:            flex;
+    justify-content:    center;
+    align-items:        center;
+    flex-direction:     column;
+}
+
+.layout-content label {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.social-button-group {
+    margin-top:     10px;
+    margin-bottom:  10px;
+    display:        flex;
+    /*flex-direction: column;*/
+}
+
+.social-btn {
+    padding:        15px;
+    min-width:      200px;
+    border-radius:  3px;
+    cursor:         pointer;
+    margin-bottom:  4px;
+    display:        flex;
+    margin-left:    15px;
+    margin-right:   15px;
+    justify-content: center;
+}
+
+.layout-content input:not([type=checkbox]) {
+    border-radius: 3px;
+    display: block;
+    width: 100%;
+    height: 50px;
+    max-width: 315px;
+    min-width: 300px;
+    padding: 15px;
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 10px;
+    outline: none;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+}
+
+.close-btn {
+    font-size: 32px;
+    margin-right: 40px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.loginlayout-backdrop a {
+    color: white;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.social-btn:hover, .social-btn:active, .social-btn:focus {
+    text-decoration: none;
+}
+
+.social-icon .fa {
+    font-size:          32px;
+}
+
+.facebook-btn {
+    background-color: blue;
+    min-width:          60px;
+    border-radius:      50%;
+}
+.google-btn {
+    background-color: red;
+    min-width:          60px;
+    border-radius:      50%;
+}
+.github-btn {
+    background-color: black;
+    min-width:          60px;
+    border-radius:      50%;
+}
+
+.social-btn .text-holder {
+    padding-left:   15px;
+    padding-right:  15px;
+    font-size: 16px;
+    line-height: 16px;
+    align-self: center;
+}
+
+/*@media screen and (max-width: 480px) {
+    .social-btn {
+        min-width: 200px;
+    }
+}*/
+
+.login-btn {
+    background-color: rgb(136,209,132);
+    text-align: center;
+}
+
+.icon-divider {
+    margin-top: -15px;
+    margin-bottom: -15px;
+    display: inline-block;
+    width: 1px;
+    padding: 0;
+    background-color: rgba(143,143,143, 0.57);
+}
+
+.register-text {
+    margin-bottom: 20px;
+}
+
+.social-button-group .mdl-button {
+    background-color: #3F51B5;
+    color: white;
+}
+
+.loginlayout-backdrop .mdl-selectfield__arrow-down {
+    color: white;
+    border-top: 5px solid white !important;
+}
+
+.loginlayout-backdrop .mdl-selectfield__box {
+    border-bottom: solid 1px white;
+}
+
+.loginlayout-backdrop a.mdl-button {
+    text-decoration: none;
+}
+
+.social-button-group .mdl-button:first-child {
+    margin-right: 8px;
+}
+
+/****** MOBILE RELATED CHANGES ******/
+@media screen and (max-width: 767px) {
+    .close-btn {
+        margin-right: 20px;
+    }
+}

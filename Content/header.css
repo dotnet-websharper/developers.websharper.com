@@ -1,0 +1,180 @@
+/* Header related css to share between sites */
+
+.mdl-layout__header {
+    min-height: 48px;
+    max-height: 48px;
+    display: -webkit-flex;
+    display: flex;
+    background-color: #f3f3f3;
+    color: #222;
+    box-shadow: none;
+    left: 16px;
+}
+
+.mdl-layout__header::before {
+    background-color: #f3f3f3;
+}
+
+.mdl-layout__drawer-button {
+    margin: 0;
+    color: inherit !important;
+    color: unset !important;
+    line-height: 48px;
+    background-color: transparent;
+    left: 16px;
+}
+
+.mdl-layout__header-row {
+    height: 48px;
+    padding-left: 68px;
+}
+
+.mdl-layout__header-row .mdl-layout-title {
+    flex: 1;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    line-height: 22px;
+}
+
+.mdl-layout-title {
+    font-size: 18px;
+}
+
+.mdl-layout-title > a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.header-menu {
+    position: relative;
+    display: flex;
+    max-height: 32px;
+}
+
+.mdl-layout__header-row .mdl-navigation {
+    height: 32px;
+    height: unset;
+}
+
+.mdl-button.condensed {
+    height: 32px;
+    padding: 0 8px;
+    line-height: 32px;
+    min-width: unset;
+}
+
+.mdl-layout__header-row .mdl-button {
+    color: #000;
+}
+
+.mdl-layout__header-row .mdl-button + .mdl-button {
+    margin-left: 8px;
+}
+
+.mdl-button--icon {
+    border-radius: 0%;
+}
+#login-menu {
+    overflow-y: hidden;
+}
+
+.login-frame-title {
+    display: none;
+}
+
+#login-control iframe {
+    width: 140px;
+    height: 60px;
+    padding: 8px;
+    border: none;
+}
+
+.apps-dropdown {
+    margin-left: 8px;
+    height: 32px;
+    line-height: 32px;
+    color: inherit;
+    color: unset;
+}
+
+.apps-dropdown .dropdown-menu {
+    right: 0;
+    left: unset;
+    line-height: 28px;
+    border-radius: 0;
+    margin-top: 0;
+}
+
+.apps-dropdown .material-icons {
+    font-size: 28px;
+    height: 28px;
+    line-height: 28px;
+    width: 28px;
+    transform: translate(-14px,-14px);
+}
+
+.mdl-button--icon .mdl-button__ripple-container {
+    border-radius: unset;
+}
+
+.forum-header {
+    padding-left: 16px;
+}
+
+@media screen and (max-width: 1024px) {
+    .mdl-layout__drawer-button {
+        left: 4px;
+    }
+    .forum-header {
+        padding-left: 4px;
+    }
+}
+
+.mdl-layout:not(.is-small-screen) .menu-swiper {
+    display: none;
+}
+
+.mdl-layout__header-row .mdl-navigation a {
+    color: inherit;
+    color: unset;
+}
+
+.c-d-button {
+    color: inherit;
+    color: unset;
+}
+
+.apps-dropdown .dropdown-menu a, .apps-dropdown .dropdown-menu a:hover, .apps-dropdown .dropdown-menu a:visited, .apps-dropdown .dropdown-menu a:active {
+    color: #337ab7;
+    text-decoration: none;
+    font-weight: unset;
+}
+
+.mdl-layout__header-row .mdl-navigation__link {
+    color: inherit;
+    color: unset;
+}
+
+.mdl-layout__header-row .mdl-layout-title {
+    padding-left: 0;
+}
+
+.mdl-layout__header-row.forum-header .mdl-layout-title {
+    padding-left: 6px;
+}
+
+.material-icons {
+    line-height: inherit;
+}
+
+.login-drop {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+
+.material-icons, .mdi, .fa {
+    user-select: none;
+    outline: none !important;
+}
